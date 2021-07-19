@@ -28,6 +28,9 @@ class Colaborador(Pessoa):
     def incluir_squad(self, squad):
         self.squad = squad
 
+    def incluir_dev(self, dev):
+        self.devs.append(dev)
+
 
 class Dev(Colaborador):
     def __init__(self, nome, fone, cargo, squad=None):
@@ -37,9 +40,6 @@ class Dev(Colaborador):
     def exibir(self):
         super().exibir()
         print(f'    Cargo de {self.cargo} na squad {self.squad.nome}\n')
-
-    def incluir_dev(self, dev):
-        self.devs.append(dev)
 
 
 print('\n-=-=-=-=-=-=-=-=-=-=-=-=-=-Sky.One Solutions-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
